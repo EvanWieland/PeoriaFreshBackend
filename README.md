@@ -1,2 +1,0 @@
-# PeoriaFreshBackend
-Backend for PeoriaFresh
