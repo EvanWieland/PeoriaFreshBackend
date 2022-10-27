@@ -24,3 +24,8 @@ dependencies {
 
     runtimeOnly("org.postgresql:postgresql")
 }
+
+// disable jar
+tasks.withType<Jar> {
+    enabled = false
+}
