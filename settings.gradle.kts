@@ -1,1 +1,1 @@
-rootProject.name = "peoriafreshbackend"
+rootProject.name = "demo"
