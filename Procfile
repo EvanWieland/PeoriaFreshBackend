@@ -1,0 +1,1 @@
+web: java -jar build/libs/PeoriaFreshBackend.jar --server.port=$PORT
