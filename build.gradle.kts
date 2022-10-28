@@ -16,6 +16,7 @@ repositories {
 }
 
 dependencies {
+	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("org.springframework.boot:spring-boot-starter")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
@@ -36,6 +37,6 @@ tasks.withType<Test> {
 tasks.getByName<Jar>("jar") {
 	enabled = false
 	manifest {
-		attributes["Main-Class"] = "com.peoriafresh.api.ApiApplicationKt"
+		attributes["Main-Class"] = "com.peoriafresh.api.ApplicationKt"
 	}
 }
