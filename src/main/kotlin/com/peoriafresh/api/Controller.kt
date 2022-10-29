@@ -9,7 +9,6 @@ import org.springframework.http.MediaType
 import com.zaxxer.hikari.HikariConfig
 import com.zaxxer.hikari.HikariDataSource
 import java.net.URI
-import javax.sql.DataSource
 
 @RestController
 class GreetingController {
