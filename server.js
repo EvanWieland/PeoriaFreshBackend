@@ -33,11 +33,16 @@ function initial() {
 
     Role.create({
         id: 2,
-        name: "moderator"
+        name: "distributor"
     });
 
     Role.create({
         id: 3,
+        name: "producer"
+    });
+
+    Role.create({
+        id: 4,
         name: "admin"
     });
 }

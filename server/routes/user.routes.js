@@ -10,6 +10,7 @@ module.exports = (app) => {
         next();
     });
 
+    // Test access to public data (e.g. no authentication required)
     app.get("/api/test/all", controller.allAccess);
 
     app.get(
@@ -19,9 +20,15 @@ module.exports = (app) => {
     );
 
     app.get(
-        "/api/test/mod",
-        [authJwt.verifyToken, authJwt.isModerator],
-        controller.moderatorBoard
+        "/api/test/distributor",
+        [authJwt.verifyToken, authJwt.isDistributor],
+        controller.distributorBoard
+    );
+
+    app.get(
+        "/api/test/producer",
+        [authJwt.verifyToken, authJwt.isProducer],
+        controller.producerBoard
     );
 
     app.get(
