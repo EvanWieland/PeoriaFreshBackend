@@ -16,6 +16,7 @@ exports.signup = (req, res) => {
         password: bcrypt.hashSync(req.body.password, 8)
     })
         .then(user => {
+            // TODO: remove - Allows user to set role on signup (DANGEROUS).
             if (req.body.roles) {
                 Role.findAll({
                     where: {
@@ -29,7 +30,7 @@ exports.signup = (req, res) => {
                     });
                 });
             } else {
-                // user role = 1
+                // producer role = 1
                 user.setRoles([1]).then(() => {
                     res.send({message: "User was registered successfully!"});
                 });

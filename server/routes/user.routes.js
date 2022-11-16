@@ -14,9 +14,9 @@ module.exports = (app) => {
     app.get("/api/test/all", controller.allAccess);
 
     app.get(
-        "/api/test/user",
-        [authJwt.verifyToken],
-        controller.userBoard
+        "/api/test/consumer",
+        [authJwt.verifyToken, authJwt.isConsumer],
+        controller.consumerBoard
     );
 
     app.get(

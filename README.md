@@ -30,15 +30,15 @@ $ npm start
 
 ### API Endpoints
 
-| Methods | Urls                  | Actions                      |
-|---------|-----------------------|------------------------------|
-| POST    | /api/auth/signup      | Signup new account           |
-| POST    | /api/auth/signin      | Login an account             |
-| GET     | /api/test/all         | Retrieve public content      |
-| GET     | /api/test/user        | Access User’s content        |
+| Methods | Urls                  | Actions                     |
+|---------|-----------------------|-----------------------------|
+| POST    | /api/auth/signup      | Signup new account          |
+| POST    | /api/auth/signin      | Login an account            |
+| GET     | /api/test/all         | Retrieve public content     |
+| GET     | /api/test/consumer    | Access Consumer’s content   |
 | GET     | /api/test/distributor | Access Distributor’s content |
-| GET     | /api/test/producer    | Access Producer’s content    |
-| GET     | /api/test/admin       | Access Admin’s content       |
+| GET     | /api/test/producer    | Access Producer’s content   |
+| GET     | /api/test/admin       | Access Admin’s content      |
 
 ### Token Based Authentication
 

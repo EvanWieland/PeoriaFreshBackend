@@ -6,7 +6,7 @@ const db = require("./server/models");
 const app = express();
 
 var corsOptions = {
-    origin: "http://localhost:8081"
+    origin: "http://localhost:4200"
 };
 
 app.use(cors(corsOptions));
@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 // simple route
 app.get("/", (req, res) => {
-    res.json({message: "Welcome to bezkoder application."});
+    res.json({message: "Welcome to the PeoriaFresh API."});
 });
 
 // For testing...
@@ -28,7 +28,7 @@ const Role = db.role;
 function initial() {
     Role.create({
         id: 1,
-        name: "user"
+        name: "producer"
     });
 
     Role.create({
@@ -38,7 +38,7 @@ function initial() {
 
     Role.create({
         id: 3,
-        name: "producer"
+        name: "consumer"
     });
 
     Role.create({
