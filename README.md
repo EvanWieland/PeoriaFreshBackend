@@ -20,6 +20,12 @@ Node.js.
 $ npm install
 ```
 
+### Proxy DB for Local Development
+
+```
+$ flyctl proxy 5432 -a peoriafresh-db
+```
+
 ### Set Environment Variables for Node.js
 
 * DATABASE_HOST
@@ -34,6 +40,12 @@ $ npm install
 
 ```
 $ npm start
+```
+
+### Deploy to Fly.io
+
+```
+$ fly deploy
 ```
 
 ## Overview
