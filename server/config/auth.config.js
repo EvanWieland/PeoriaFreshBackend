@@ -1,5 +1,5 @@
-// TODO: Inject secrets from environment variable
+const {TOKEN_SECRET} = process.env;
 
 module.exports = {
-    secret: "peoriafresh-secret-key"
+    secret: TOKEN_SECRET,
 };

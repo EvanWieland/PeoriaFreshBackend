@@ -20,6 +20,16 @@ Node.js.
 $ npm install
 ```
 
+### Set Environment Variables for Node.js
+
+* DATABASE_HOST
+* DATABASE_PASSWORD
+* DATABASE_USERNAME
+* DATABASE_NAME
+* TOKEN_SECRET
+
+> Ask Evan Wieland for the values of these variables.
+
 ### Run the Server
 
 ```

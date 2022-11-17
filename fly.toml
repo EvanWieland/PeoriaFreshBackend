@@ -1,6 +1,6 @@
-# fly.toml file generated for peoriafresh on 2022-11-10T14:39:56-06:00
+# fly.toml file generated for peoriafresh-api on 2022-11-17T14:27:31-06:00
 
-app = "peoriafresh"
+app = "peoriafresh-api"
 kill_signal = "SIGINT"
 kill_timeout = 5
 processes = []
