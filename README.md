@@ -52,15 +52,22 @@ $ fly deploy
 
 ### API Endpoints
 
-| Methods | Urls                  | Actions                     |
-|---------|-----------------------|-----------------------------|
-| POST    | /api/auth/signup      | Signup new account          |
-| POST    | /api/auth/signin      | Login an account            |
-| GET     | /api/test/all         | Retrieve public content     |
-| GET     | /api/test/consumer    | Access Consumer’s content   |
-| GET     | /api/test/distributor | Access Distributor’s content |
-| GET     | /api/test/producer    | Access Producer’s content   |
-| GET     | /api/test/admin       | Access Admin’s content      |
+| Methods | Urls                         | Actions                       |
+|---------|------------------------------|-------------------------------|
+| POST    | /api/auth/signup             | Signup new account            |
+| POST    | /api/auth/signin             | Login an account              |
+| GET     | /api/public/all              | Retrieve public content       |
+| GET     | /api/public/distributors     | Retrieve list of distributors |
+| GET     | /api/public/produce          | Retrieve list of produce      |
+| POST    | /api/public/consumer/request | Send produce request          |
+| GET     | /api/test/admin              | Access Admin’s content        |
+| GET     | /api/test/consumer           | Access Consumer’s content     |
+| GET     | /api/distributor             | Access Distributor’s content  |
+| GET     | /api/test/admin              | Access Admin’s content        |
+| GET     | /api/distributor/requests    | View Distributor’s requests   |
+| GET     | /api/producer                | View Producer's fulfillments  |
+| GET     | /api/producer/fulfillments   | View Producer's fulfillments  |
+| POST    | /api/producer/fulfillment    | Send fulfillment request      |
 
 ### Token Based Authentication
 

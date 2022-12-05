@@ -39,9 +39,21 @@ module.exports = (app) => {
 
     // Producer
     app.get(
-        "/api/test/producer",
+        "/api/producer",
         [authJwt.verifyToken, authJwt.isProducer],
-        controller.producerBoard
+        controller.producer.fulfillments
+    );
+
+    app.get(
+        "/api/producer/fulfillments",
+        [authJwt.verifyToken, authJwt.isProducer],
+        controller.producer.fulfillments
+    );
+
+    app.post(
+        "/api/producer/fulfillment",
+        [authJwt.verifyToken, authJwt.isProducer],
+        controller.producer.fulfillment
     );
 
     // Admin

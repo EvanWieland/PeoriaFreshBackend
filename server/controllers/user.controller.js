@@ -66,6 +66,34 @@ exports.consumerBoard = (req, res) => {
     res.status(200).send("Consumer Content.");
 };
 
+// Producer
+exports.producer = {
+    fulfillments: async (req, res) => {
+        const fulfillments = await db.fulfillment.findAll({
+            where: {
+                userId: req.userId
+            },
+            include: [db.produce, db.distributor]
+        });
+
+        res.status(200).send(fulfillments);
+    },
+    fulfillment: async (req, res) => {
+        const {produceId, userId, distributorId, quantity} = req.body;
+
+        await db.fulfillment.create({
+            produceId,
+            distributorId,
+            userId,
+            quantity
+        }).catch(() => {
+            return res.status(500).send({message: "Error creating request."});
+        })
+
+        res.status(200).send({message: "Fulfillment created successfully."});
+    }
+}
+
 // Distributor
 exports.distributor = {
     distributorBoard: (req, res) => {
